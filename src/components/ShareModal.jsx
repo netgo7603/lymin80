@@ -7,9 +7,12 @@ const ShareModal = ({ isOpen, onClose, title, url, color }) => {
         color === 'green' ? 'rgb(57, 255, 20)' :
             color === 'gold' ? 'rgb(255, 215, 0)' : 'white';
 
+    const [copied, setCopied] = React.useState(false);
+
     const handleCopy = () => {
         navigator.clipboard.writeText(url);
-        alert('Link copied to clipboard!'); // Replace with a nicer toast in production
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
     };
 
     const shareTwitter = () => {
@@ -44,7 +47,7 @@ const ShareModal = ({ isOpen, onClose, title, url, color }) => {
                             <div className="flex justify-between items-center mb-6">
                                 <h3 className="text-xl font-bold font-display flex items-center gap-2">
                                     <Sparkles size={20} style={{ color: neonColor }} />
-                                    Share to Network
+                                    공유하기
                                 </h3>
                                 <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-full transition-colors">
                                     <X size={20} />
@@ -52,27 +55,45 @@ const ShareModal = ({ isOpen, onClose, title, url, color }) => {
                             </div>
 
                             <div className="grid grid-cols-3 gap-4 mb-6">
-                                <button onClick={handleCopy} className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors group">
-                                    <div className="p-3 rounded-full bg-gray-800 group-hover:scale-110 transition-transform">
-                                        <LinkIcon size={24} className="text-white" />
+                                <button onClick={handleCopy} className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors group relative overflow-hidden">
+                                    <div className={`p-3 rounded-full transition-all duration-300 ${copied ? 'bg-green-500 text-black' : 'bg-gray-800 text-white group-hover:scale-110'}`}>
+                                        {copied ? <Sparkles size={24} /> : <LinkIcon size={24} />}
                                     </div>
-                                    <span className="text-xs font-bold uppercase tracking-wider text-gray-400">Copy</span>
+                                    <span className={`text-xs font-bold uppercase tracking-wider transition-colors ${copied ? 'text-green-400' : 'text-gray-400'}`}>
+                                        {copied ? '복사됨!' : '복사'}
+                                    </span>
                                 </button>
 
                                 <button onClick={shareTwitter} className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors group">
                                     <div className="p-3 rounded-full bg-[#1DA1F2]/20 group-hover:scale-110 transition-transform">
                                         <Twitter size={24} className="text-[#1DA1F2]" />
                                     </div>
-                                    <span className="text-xs font-bold uppercase tracking-wider text-gray-400">Twitter</span>
+                                    <span className="text-xs font-bold uppercase tracking-wider text-gray-400">트위터</span>
                                 </button>
 
                                 <button onClick={shareFacebook} className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors group">
                                     <div className="p-3 rounded-full bg-[#4267B2]/20 group-hover:scale-110 transition-transform">
                                         <Facebook size={24} className="text-[#4267B2]" />
                                     </div>
-                                    <span className="text-xs font-bold uppercase tracking-wider text-gray-400">Facebook</span>
+                                    <span className="text-xs font-bold uppercase tracking-wider text-gray-400">페이스북</span>
                                 </button>
                             </div>
+
+                            {navigator.share && (
+                                <button
+                                    onClick={() => {
+                                        navigator.share({
+                                            title: title,
+                                            text: `${title} - Lymin80 Shop에서 확인해보세요!`,
+                                            url: url
+                                        }).catch(console.error);
+                                    }}
+                                    className="w-full py-3 rounded-xl bg-gradient-to-r from-neon-purple to-blue-500 text-white font-bold uppercase tracking-wider hover:opacity-90 transition-opacity flex items-center justify-center gap-2 mb-4"
+                                >
+                                    <Sparkles size={20} />
+                                    더보기
+                                </button>
+                            )}
 
                             <div className="p-3 rounded-lg bg-black/50 border border-white/5 flex items-center gap-3">
                                 <div className="flex-1 truncate text-sm text-gray-500 font-mono">
@@ -82,7 +103,7 @@ const ShareModal = ({ isOpen, onClose, title, url, color }) => {
                                     onClick={handleCopy}
                                     className="text-xs font-bold px-3 py-1.5 rounded bg-white/10 hover:bg-white/20 transition-colors"
                                 >
-                                    COPY
+                                    복사
                                 </button>
                             </div>
                         </div>

@@ -1,8 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --color-neon-green: #39ff14;
+  --color-neon-purple: #b026ff;
+  --color-neon-gold: #ffd700;
+  --color-dark-bg: #050510;
+  --color-card-bg: rgba(255, 255, 255, 0.05);
+
+  --font-display: 'Orbitron', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+}
 
 @layer base {
   body {

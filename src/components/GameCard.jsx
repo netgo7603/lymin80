@@ -20,13 +20,12 @@ const GameCard = ({ title, description, image, url, color }) => {
             whileHover={{ scale: 1.05, boxShadow: `0 0 20px ${neonColor}40` }}
             className="glass-card overflow-hidden group relative"
         >
-            <div className="aspect-video w-full overflow-hidden">
+            <div className="aspect-square w-full overflow-hidden relative bg-white p-6">
                 <img
                     src={image}
                     alt={title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
             </div>
 
             <div className="p-6 relative z-10">
