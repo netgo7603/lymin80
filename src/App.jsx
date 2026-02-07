@@ -51,17 +51,21 @@ function App() {
     <HelmetProvider>
       <SeoMeta />
       <div className="min-h-screen bg-dark-bg text-white font-sans selection:bg-neon-green selection:text-black">
-        <header className="fixed top-0 left-0 right-0 z-50 bg-dark-bg/80 backdrop-blur-md border-b border-white/5">
-          <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Desktop Enhanced Header */}
+        <header className="fixed top-0 left-0 right-0 z-50 bg-dark-bg/80 backdrop-blur-md border-b border-white/5 shadow-lg transition-all duration-300">
+          <div className="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
             <div className="text-2xl font-black tracking-widest font-display text-white">
               LYMIN80<span className="text-neon-green">.</span>SHOP
             </div>
 
-            {/* Desktop Nav */}
-            <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider text-gray-400">
-              <a href="#" className="hover:text-neon-green transition-colors">Home</a>
-              <a href="#games" className="hover:text-neon-purple transition-colors">Games</a>
-              <a href="#about" className="hover:text-neon-gold transition-colors">About</a>
+            {/* Desktop Nav - Enhanced */}
+            <nav className="hidden md:flex gap-10 text-sm font-bold uppercase tracking-wider text-gray-400 items-center">
+              <a href="#" className="hover:text-neon-green transition-colors hover:scale-105 transform">Home</a>
+              <a href="#games" className="hover:text-neon-purple transition-colors hover:scale-105 transform">Games</a>
+              <a href="#about" className="hover:text-neon-gold transition-colors hover:scale-105 transform">About</a>
+              <a href="#games" className="px-5 py-2 rounded-full bg-white/10 hover:bg-white text-white hover:text-black transition-all duration-300 border border-white/20">
+                Play Now
+              </a>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -79,21 +83,27 @@ function App() {
         <main>
           <Hero />
 
-          <section id="games" className="py-24 relative">
+          <section id="games" className="py-32 relative">
             <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-neon-purple to-transparent opacity-50" />
 
-            <div className="container mx-auto px-6">
+            {/* Background Pattern for Grid */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+
+            <div className="container mx-auto px-6 relative z-10 max-w-7xl">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-center mb-16"
+                className="text-center mb-20"
               >
-                <h2 className="text-4xl md:text-5xl font-black mb-4 font-display">추천 <span className="text-neon-purple">게임</span></h2>
-                <div className="w-24 h-1 bg-neon-purple mx-auto rounded-full" />
+                <h2 className="text-5xl md:text-6xl font-black mb-6 font-display">추천 <span className="text-neon-purple">게임</span></h2>
+                <div className="w-24 h-1 bg-neon-purple mx-auto rounded-full mb-6" />
+                <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                  엄선된 최고의 웹 게임들을 만나보세요.
+                </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {games.map((game) => (
                   <GameCard key={game.id} {...game} />
                 ))}
@@ -104,19 +114,29 @@ function App() {
           <About />
         </main>
 
-        <footer className="bg-black py-12 border-t border-white/10">
-          <div className="container mx-auto px-6 text-center">
-            <div className="flex justify-center gap-6 mb-8">
-              <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-white/10 transition-colors">
-                <Github size={24} />
+        <footer className="bg-black py-16 border-t border-white/10 relative overflow-hidden">
+          {/* Footer Gradient */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-neon-purple/10 to-transparent pointer-events-none" />
+
+          <div className="container mx-auto px-6 text-center relative z-10">
+            <div className="flex justify-center gap-8 mb-10">
+              <a href="#" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:text-neon-purple transition-all duration-300 hover:scale-110 border border-white/5">
+                <Github size={28} />
               </a>
-              <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-white/10 transition-colors">
-                <Twitter size={24} />
+              <a href="#" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:text-blue-400 transition-all duration-300 hover:scale-110 border border-white/5">
+                <Twitter size={28} />
               </a>
             </div>
-            <p className="text-gray-500 text-sm">
+
+            <div className="flex justify-center gap-8 mb-8 text-sm text-gray-400 font-bold uppercase tracking-widest">
+              <a href="#" className="hover:text-white transition-colors">Privacy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms</a>
+              <a href="#" className="hover:text-white transition-colors">Contact</a>
+            </div>
+
+            <p className="text-gray-600 text-sm">
               © 2026 Lymin80 Shop. All rights reserved. <br />
-              <span className="opacity-50">Forged in the digital void.</span>
+              <span className="opacity-50 mt-2 inline-block font-mono">Forged in the digital void.</span>
             </p>
           </div>
         </footer>

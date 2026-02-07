@@ -25,7 +25,7 @@ const About = () => {
             <div className="absolute top-1/4 left-0 w-64 h-64 bg-neon-purple/20 rounded-full blur-[100px]" />
             <div className="absolute bottom-1/4 right-0 w-64 h-64 bg-neon-green/20 rounded-full blur-[100px]" />
 
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container mx-auto px-6 relative z-10 max-w-7xl">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
