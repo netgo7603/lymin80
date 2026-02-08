@@ -25,5 +25,14 @@ export const games = [
         url: "https://bacteria.lymin80.shop/",
         color: "gold",
         tags: ["전략", "SF", "시뮬레이션"]
+    },
+    {
+        id: 4,
+        title: "리셋 플로우 (Reset Flow)",
+        description: "지친 마음을 씻어내고 새로운 에너지를 채우는 공간. 매일 전달되는 위로와 공감의 메세지로 일상을 리셋하세요.",
+        image: "/resetflow.png",
+        url: "https://resetflow.lymin80.shop/",
+        color: "blue",
+        tags: ["힐링", "마인드셋", "명언", "캐주얼"]
     }
 ];
