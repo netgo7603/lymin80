@@ -3,13 +3,202 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-  <title>Lymin80 Shop | 웹 게임 & 운세 포털</title>
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+
+  <!-- Primary Meta -->
+  <title>Lymin80 Shop | 무료 웹 게임 & 운세 포털</title>
+  <meta name="description"
+    content="무료 웹 게임, 타로 운세, 미니게임을 한곳에서! 설치 없이 즐기는 몰입감 넘치는 아케이드와 힐링 타임. 지금 바로 플레이하세요." />
+  <meta name="keywords"
+    content="무료게임, 웹게임, 타로, 운세, 미니게임, 아케이드, 스네이크게임, 심심풀이, 킬링타임, 온라인게임, 리셋플로우, 명언, 힐링서비스, 박테리아워, 지그재그" />
+  <meta name="author" content="Lymin80 Shop" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.lymin80.shop/" />
+
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/svg+xml" href="/snake.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/og_image.png" />
+  <link rel="apple-touch-icon" href="/og_image.png" />
+
+  <!-- PWA / Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#050510" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Lymin80 Shop" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.lymin80.shop/" />
+  <meta property="og:title" content="Lymin80 Shop | 무료 웹 게임 & 운세 포털" />
+  <meta property="og:description"
+    content="설치 없는 무료 웹 게임과 신비로운 타로 운세. 매일 새로운 즐거움을 발견하세요." />
+  <meta property="og:image" content="https://www.lymin80.shop/og_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Lymin80 Shop - 무료 웹 게임 & 운세 포털" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:site_name" content="Lymin80 Shop" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.lymin80.shop/" />
+  <meta name="twitter:title" content="Lymin80 Shop | 무료 웹 게임 & 운세 포털" />
+  <meta name="twitter:description" content="설치 없는 무료 웹 게임과 신비로운 타로 운세. 매일 새로운 즐거움을 발견하세요." />
+  <meta name="twitter:image" content="https://www.lymin80.shop/og_image.png" />
+
+  <!-- GEO / 지역 타겟팅 -->
+  <meta name="geo.region" content="KR" />
+  <meta name="geo.placename" content="South Korea" />
+  <meta name="content-language" content="ko" />
+  <link rel="alternate" hreflang="ko" href="https://www.lymin80.shop/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.lymin80.shop/" />
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-1032715451644664" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032715451644664"
+    crossorigin="anonymous"></script>
+
+  <!-- Structured Data: WebSite (Google 검색 최적화) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Lymin80 Shop",
+    "alternateName": "라이민80 샵",
+    "url": "https://www.lymin80.shop/",
+    "description": "무료 웹 게임, 타로 운세, 미니게임을 한곳에서! 설치 없이 즐기는 몰입감 넘치는 아케이드와 힐링 타임.",
+    "inLanguage": "ko",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.lymin80.shop/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Lymin80 Shop",
+    "url": "https://www.lymin80.shop/",
+    "logo": "https://www.lymin80.shop/og_image.png",
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Structured Data: ItemList (게임 목록) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Lymin80 Shop 추천 게임",
+    "description": "무료 웹 게임 및 운세 서비스 목록",
+    "numberOfItems": 4,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "WebApplication",
+          "name": "지그재그 (Zigzag)",
+          "description": "네온 빛 가득한 세상에서 펼쳐지는 초고속 스네이크 게임! 사이버 뱀을 성장시키고 디지털 그리드를 지배하세요.",
+          "url": "https://zigzag.lymin80.shop/",
+          "image": "https://www.lymin80.shop/zigzag.png",
+          "applicationCategory": "Game",
+          "operatingSystem": "Web Browser",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "WebApplication",
+          "name": "신비한 타로 (Tarot Mystique)",
+          "description": "고대 아르카나로 당신의 운명을 확인하세요. 현대적인 디지털 감성으로 재해석된 영적인 여정.",
+          "url": "https://tarot.lymin80.shop/",
+          "image": "https://www.lymin80.shop/tarot.png",
+          "applicationCategory": "Entertainment",
+          "operatingSystem": "Web Browser",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "WebApplication",
+          "name": "박테리아 워 (Bacteria War)",
+          "description": "현미경 속 거대한 전쟁! 바이러스 군단을 지휘하여 페트리 접시를 정복하는 전략 생존 게임.",
+          "url": "https://bacteria.lymin80.shop/",
+          "image": "https://www.lymin80.shop/bacteria.png",
+          "applicationCategory": "Game",
+          "operatingSystem": "Web Browser",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "WebApplication",
+          "name": "리셋 플로우 (Reset Flow)",
+          "description": "지친 마음을 씻어내고 새로운 에너지를 채우는 공간. 매일 전달되는 위로와 공감의 메세지로 일상을 리셋하세요.",
+          "url": "https://resetflow.lymin80.shop/",
+          "image": "https://www.lymin80.shop/resetflow.png",
+          "applicationCategory": "Lifestyle",
+          "operatingSystem": "Web Browser",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW"
+          }
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <noscript>
+    <div style="padding:2rem;text-align:center;font-family:sans-serif;">
+      <h1>Lymin80 Shop</h1>
+      <p>이 사이트를 이용하려면 JavaScript를 활성화해 주세요.</p>
+      <p>무료 웹 게임, 타로 운세, 미니게임을 한곳에서 즐기세요!</p>
+      <ul>
+        <li><a href="https://zigzag.lymin80.shop/">지그재그 - 스네이크 게임</a></li>
+        <li><a href="https://tarot.lymin80.shop/">신비한 타로 - 운세</a></li>
+        <li><a href="https://bacteria.lymin80.shop/">박테리아 워 - 전략 게임</a></li>
+        <li><a href="https://resetflow.lymin80.shop/">리셋 플로우 - 힐링</a></li>
+      </ul>
+    </div>
+  </noscript>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
