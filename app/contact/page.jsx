@@ -87,7 +87,7 @@ export default function ContactPage() {
                 {/* AdSense Unit */}
                 <div className="mb-16">
                     <AdUnit
-                        slotId="REPLACE_WITH_SLOT_ID_8"
+                        slotId="5712499147"
                         className="w-full text-center"
                         style={{ minHeight: '100px' }}
                     />

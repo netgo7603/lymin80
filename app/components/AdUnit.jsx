@@ -37,6 +37,7 @@ export default function AdUnit({
         );
     }
 
+
     return (
         <div className={`ad-container ${className}`} style={style}>
             <ins

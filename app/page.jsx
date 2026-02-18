@@ -41,7 +41,7 @@ export default function HomePage() {
       {/* AdSense Unit */}
       <div className="container mx-auto px-6 max-w-7xl mb-24">
         <AdUnit
-          slotId="REPLACE_WITH_SLOT_ID_1"
+          slotId="5712499147"
           className="w-full text-center"
           style={{ minHeight: '100px' }}
         />
@@ -84,7 +84,7 @@ export default function HomePage() {
       {/* AdSense Unit */}
       <div className="container mx-auto px-6 max-w-7xl mb-24">
         <AdUnit
-          slotId="REPLACE_WITH_SLOT_ID_2"
+          slotId="5712499147"
           className="w-full text-center"
           style={{ minHeight: '100px' }}
         />
