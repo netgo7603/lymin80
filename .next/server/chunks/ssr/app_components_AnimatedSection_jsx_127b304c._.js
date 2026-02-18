@@ -1,3 +1,0 @@
-module.exports=[71390,a=>{"use strict";var b=a.i(87924),c=a.i(46271);function d({children:a,className:d,...e}){return(0,b.jsx)(c.motion.div,{className:d,...e,children:a})}function e({children:a,className:d,delay:e=0}){return(0,b.jsx)(c.motion.div,{initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{delay:e,duration:.5},className:d,children:a})}function f({children:a,className:d,delay:e=0}){return(0,b.jsx)(c.motion.div,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:e,duration:.8},className:d,children:a})}a.s(["FadeIn",()=>f,"FadeInView",()=>e,"MotionDiv",()=>d])}];
-
-//# sourceMappingURL=app_components_AnimatedSection_jsx_127b304c._.js.map
