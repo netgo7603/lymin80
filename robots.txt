@@ -16,6 +16,7 @@ Allow: /zigzag.png
 Allow: /tarot.png
 Allow: /bacteria.png
 Allow: /resetflow.png
+Allow: /explodi.png
 
 # Google 이미지봇
 User-agent: Googlebot-Image
@@ -24,6 +25,7 @@ Allow: /zigzag.png
 Allow: /tarot.png
 Allow: /bacteria.png
 Allow: /resetflow.png
+Allow: /explodi.png
 Allow: /zigzag_banner.png
 Allow: /tarot_banner.png
 Allow: /bacteria_banner.png

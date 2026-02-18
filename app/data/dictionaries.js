@@ -41,6 +41,10 @@ export const dictionaries = {
                     name: "리셋 플로우",
                     desc: "지친 마음을 씻어내고 새로운 에너지를 채우는 공간.",
                 },
+                explodi: {
+                    name: "익스플로디",
+                    desc: "화려한 이펙트와 함께 블록을 터뜨리는 짜릿한 퍼즐 게임!",
+                },
             }
         },
         about: {
@@ -164,6 +168,10 @@ export const dictionaries = {
                 resetflow: {
                     name: "Reset Flow",
                     desc: "A space to wash away your weary mind and fill up with new energy.",
+                },
+                explodi: {
+                    name: "EXPLODI",
+                    desc: "A thrilling puzzle game where you pop blocks with spectacular effects!",
                 },
             }
         },

@@ -132,6 +132,7 @@ export default function WebGameGuidePage() {
                   { title: '신비한 타로', desc: '아름다운 카드 아트와 함께하는 타로 리딩 체험', url: 'https://tarot.lymin80.shop' },
                   { title: '박테리아 워', desc: '전략적 사고가 필요한 영역 확장 전략 게임', url: 'https://bacteria.lymin80.shop' },
                   { title: '리셋 플로우', desc: '마음을 정리하는 힐링 인터랙티브 경험', url: 'https://resetflow.lymin80.shop' },
+                  { title: '익스플로디', desc: '화려한 이펙트와 함께 블록을 터뜨리는 짜릿한 퍼즐 게임', url: 'https://explodi.lymin80.shop' },
                 ].map((game, i) => (
                   <a
                     key={i}

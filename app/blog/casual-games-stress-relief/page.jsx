@@ -185,6 +185,7 @@ export default function CasualGamesStressReliefPage() {
                   { title: '리셋 플로우', desc: '부드러운 비주얼과 함께 마음을 정리하는 힐링 경험.', url: 'https://resetflow.lymin80.shop' },
                   { title: '신비한 타로', desc: '타로 카드를 통한 자기 성찰과 마음의 안정.', url: 'https://tarot.lymin80.shop' },
                   { title: '박테리아 워', desc: '전략적 사고에 집중하며 걱정을 잊어보세요.', url: 'https://bacteria.lymin80.shop' },
+                  { title: '익스플로디', desc: '블록을 터뜨리는 짜릿한 타격감으로 스트레스를 날려보세요.', url: 'https://explodi.lymin80.shop' },
                 ].map((game, i) => (
                   <a
                     key={i}

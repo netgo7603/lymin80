@@ -147,13 +147,26 @@
   <!-- 리셋 플로우 힐링 서비스 -->
   <url>
     <loc>https://resetflow.lymin80.shop/</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.lymin80.shop/resetflow.png</image:loc>
       <image:title>리셋 플로우 - 힐링 &amp; 명언 서비스</image:title>
       <image:caption>지친 마음을 씻어내고 새로운 에너지를 채우는 공간</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 익스플로디 퍼즐 게임 -->
+  <url>
+    <loc>https://explodi.lymin80.shop/</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.lymin80.shop/explodi.png</image:loc>
+      <image:title>익스플로디 - 블록 퍼즐 게임</image:title>
+      <image:caption>화려한 이펙트와 함께 블록을 터뜨리는 짜릿한 퍼즐</image:caption>
     </image:image>
   </url>
 

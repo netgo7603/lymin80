@@ -34,5 +34,14 @@ export const games = [
     url: "https://resetflow.lymin80.shop/",
     color: "blue",
     tags: ["힐링", "마인드셋", "명언", "캐주얼"]
+  },
+  {
+    id: "explodi",
+    title: "익스플로디 (EXPLODI)",
+    description: "화려한 이펙트와 함께 블록을 터뜨리는 짜릿한 퍼즐 게임! 전략적인 플레이로 높은 점수를 달성하고 스트레스를 날려버리세요.",
+    image: "/explodi.png",
+    url: "https://explodi.lymin80.shop/",
+    color: "red",
+    tags: ["퍼즐", "아케이드", "캐주얼"]
   }
 ];
