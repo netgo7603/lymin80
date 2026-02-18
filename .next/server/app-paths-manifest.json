@@ -1,0 +1,14 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/blog/browser-game-history/page": "app/blog/browser-game-history/page.js",
+  "/blog/casual-games-stress-relief/page": "app/blog/casual-games-stress-relief/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/blog/tarot-guide/page": "app/blog/tarot-guide/page.js",
+  "/blog/web-game-guide/page": "app/blog/web-game-guide/page.js",
+  "/games/page": "app/games/page.js",
+  "/page": "app/page.js",
+  "/privacy/page": "app/privacy/page.js",
+  "/terms/page": "app/terms/page.js"
+}

@@ -6,8 +6,7 @@ User-agent: *
 Allow: /
 Disallow: /assets/
 Disallow: /portal/
-Disallow: /*.js$
-Disallow: /*.css$
+
 
 # Google 검색봇
 User-agent: Googlebot

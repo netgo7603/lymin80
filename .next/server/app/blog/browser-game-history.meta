@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/blog/layout,_N_T_/blog/browser-game-history/layout,_N_T_/blog/browser-game-history/page,_N_T_/blog/browser-game-history"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/blog/browser-game-history/__PAGE__",
+    "/blog/browser-game-history",
+    "/blog",
+    "/_index",
+    "/_head"
+  ]
+}

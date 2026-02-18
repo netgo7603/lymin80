@@ -1,0 +1,220 @@
+import Link from 'next/link';
+import { Calendar, Clock, ArrowLeft } from 'lucide-react';
+import { FadeIn, FadeInView } from '../../components/AnimatedSection';
+
+export const metadata = {
+  title: '타로 카드 입문: 아르카나의 세계로',
+  description: '타로 카드의 역사, 78장의 덱 구성, 메이저 아르카나와 마이너 아르카나의 의미, 다양한 리딩 방법까지. 타로 카드의 신비로운 세계를 초보자도 쉽게 이해할 수 있도록 안내합니다.',
+  alternates: {
+    canonical: 'https://www.lymin80.shop/blog/tarot-guide',
+  },
+  openGraph: {
+    title: '타로 카드 입문: 아르카나의 세계로',
+    description: '타로 카드의 역사부터 덱 구성, 리딩 방법까지. 타로의 신비로운 세계로 안내하는 완벽 입문 가이드입니다.',
+    url: 'https://www.lymin80.shop/blog/tarot-guide',
+    type: 'article',
+  },
+};
+
+export default function TarotGuidePage() {
+  return (
+    <section className="py-32 relative">
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-50" />
+
+      <div className="container mx-auto px-6 relative z-10 max-w-4xl">
+        {/* Breadcrumb */}
+        <FadeIn>
+          <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8">
+            <Link href="/" className="hover:text-white transition-colors">홈</Link>
+            <span>/</span>
+            <Link href="/blog" className="hover:text-white transition-colors">블로그</Link>
+            <span>/</span>
+            <span className="text-white">타로 카드 입문</span>
+          </nav>
+        </FadeIn>
+
+        {/* Article */}
+        <FadeIn>
+          <article>
+            <div className="mb-12">
+              <span className="inline-block text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full text-blue-400 bg-blue-400/10 mb-4">
+                가이드
+              </span>
+              <h1 className="text-4xl md:text-5xl font-black text-white mb-6 font-display leading-tight">
+                타로 카드 입문: 아르카나의 세계로
+              </h1>
+              <div className="flex items-center gap-4 text-sm text-gray-500">
+                <span className="flex items-center gap-1">
+                  <Calendar size={16} />
+                  2026-02-12
+                </span>
+                <span className="flex items-center gap-1">
+                  <Clock size={16} />
+                  10분 읽기
+                </span>
+              </div>
+            </div>
+
+            <div className="prose prose-invert max-w-none">
+              <p className="text-lg text-gray-300 leading-relaxed mb-8">
+                타로 카드는 수백 년의 역사를 지닌 신비로운 도구로, 자기 성찰과 직관 개발에 활용되어 왔습니다. 78장의 카드로 구성된 타로 덱은 각각 고유한 상징과 의미를 담고 있으며, 이를 통해 삶의 다양한 측면에 대한 통찰을 얻을 수 있습니다.
+              </p>
+
+              <h2 className="text-3xl font-bold text-white mt-12 mb-4">타로 카드의 역사</h2>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                타로 카드의 기원은 15세기 이탈리아로 거슬러 올라갑니다. 처음에는 귀족들 사이에서 즐기던 카드 게임(Tarocchi)으로 사용되었으며, 18세기에 이르러 점술과 신비주의의 도구로 발전했습니다. 프랑스의 신비주의자들이 타로 카드와 카발라, 점성술을 연결하면서 현재 우리가 알고 있는 형태의 타로 리딩이 탄생했습니다.
+              </p>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                가장 유명한 타로 덱인 라이더-웨이트(Rider-Waite) 덱은 1909년에 제작되었으며, 현재까지도 가장 널리 사용되는 표준 덱으로 자리잡고 있습니다. 아서 에드워드 웨이트가 설계하고 파멜라 콜먼 스미스가 그린 이 덱은 직관적인 심볼리즘으로 초보자도 쉽게 해석할 수 있습니다.
+              </p>
+
+              <h2 className="text-3xl font-bold text-white mt-12 mb-4">덱 구성: 78장의 세계</h2>
+
+              <h3 className="text-xl font-bold text-white mt-8 mb-3">메이저 아르카나 (22장)</h3>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                메이저 아르카나(Major Arcana)는 타로 덱의 핵심으로, 인생의 중요한 전환점과 깊은 영적 교훈을 나타냅니다. 0번 &quot;바보(The Fool)&quot;에서 시작하여 21번 &quot;세계(The World)&quot;까지, 영혼의 여정을 상징합니다.
+              </p>
+              <div className="bg-white/5 p-6 rounded-2xl border border-white/10 mb-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-sm text-gray-300">
+                  {[
+                    '0. 바보 (The Fool)',
+                    'I. 마법사 (The Magician)',
+                    'II. 여사제 (The High Priestess)',
+                    'III. 여황제 (The Empress)',
+                    'IV. 황제 (The Emperor)',
+                    'V. 교황 (The Hierophant)',
+                    'VI. 연인 (The Lovers)',
+                    'VII. 전차 (The Chariot)',
+                    'VIII. 힘 (Strength)',
+                    'IX. 은둔자 (The Hermit)',
+                    'X. 운명의 수레바퀴 (Wheel of Fortune)',
+                    'XI. 정의 (Justice)',
+                    'XII. 매달린 사람 (The Hanged Man)',
+                    'XIII. 죽음 (Death)',
+                    'XIV. 절제 (Temperance)',
+                    'XV. 악마 (The Devil)',
+                    'XVI. 탑 (The Tower)',
+                    'XVII. 별 (The Star)',
+                    'XVIII. 달 (The Moon)',
+                    'XIX. 태양 (The Sun)',
+                    'XX. 심판 (Judgement)',
+                    'XXI. 세계 (The World)',
+                  ].map((card, i) => (
+                    <span key={i} className="py-1">{card}</span>
+                  ))}
+                </div>
+              </div>
+
+              <h3 className="text-xl font-bold text-white mt-8 mb-3">마이너 아르카나 (56장)</h3>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                마이너 아르카나(Minor Arcana)는 일상생활의 구체적인 사건과 상황을 나타냅니다. 4개의 수트(Suit)로 나뉘며, 각 수트는 14장(에이스~10, 시종, 기사, 여왕, 왕)으로 구성됩니다.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                {[
+                  { suit: '완드 (Wands)', element: '불 (Fire)', meaning: '열정, 창의성, 의지, 행동력을 상징합니다. 새로운 시작과 영감과 관련됩니다.' },
+                  { suit: '컵 (Cups)', element: '물 (Water)', meaning: '감정, 사랑, 관계, 직관을 상징합니다. 마음의 상태와 인간관계를 나타냅니다.' },
+                  { suit: '소드 (Swords)', element: '공기 (Air)', meaning: '지성, 사고, 소통, 갈등을 상징합니다. 정신적 활동과 도전을 의미합니다.' },
+                  { suit: '펜타클 (Pentacles)', element: '땅 (Earth)', meaning: '물질, 재정, 건강, 현실적 문제를 상징합니다. 안정과 풍요를 나타냅니다.' },
+                ].map((item, i) => (
+                  <div key={i} className="bg-white/5 p-5 rounded-xl border border-white/10">
+                    <h3 className="text-xl font-bold text-white mt-0 mb-1">{item.suit}</h3>
+                    <span className="text-purple-400 text-sm font-medium">{item.element}</span>
+                    <p className="text-gray-300 text-sm leading-relaxed mt-2">{item.meaning}</p>
+                  </div>
+                ))}
+              </div>
+
+              <h2 className="text-3xl font-bold text-white mt-12 mb-4">타로 리딩 방법</h2>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                타로 리딩은 카드를 배치하는 방식(스프레드)에 따라 다양한 해석이 가능합니다. 초보자부터 숙련자까지, 상황에 맞는 리딩 방법을 소개합니다.
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                  <h3 className="text-xl font-bold text-white mt-0 mb-3">원 카드 리딩 (One Card Reading)</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-2">
+                    가장 간단하면서도 강력한 방법입니다. 하루의 시작에 한 장의 카드를 뽑아 그날의 메시지를 받아보세요. 초보자에게 가장 추천하는 방법으로, 매일 한 장씩 뽑으며 카드와 친숙해질 수 있습니다.
+                  </p>
+                  <span className="text-purple-400 text-xs font-medium">난이도: 초급</span>
+                </div>
+
+                <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                  <h3 className="text-xl font-bold text-white mt-0 mb-3">쓰리 카드 리딩 (Three Card Reading)</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-2">
+                    세 장의 카드를 나란히 배치하여 과거-현재-미래를 해석합니다. 상황에 따라 마음-몸-영혼, 문제-원인-해결책 등 다양한 주제로 응용할 수 있습니다. 간결하면서도 깊이 있는 통찰을 제공합니다.
+                  </p>
+                  <span className="text-purple-400 text-xs font-medium">난이도: 초-중급</span>
+                </div>
+
+                <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                  <h3 className="text-xl font-bold text-white mt-0 mb-3">켈틱 크로스 (Celtic Cross)</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-2">
+                    10장의 카드를 사용하는 전통적이고 포괄적인 스프레드입니다. 현재 상황, 도전, 무의식적 영향, 과거, 가능한 미래, 가까운 미래, 자기 인식, 외부 환경, 희망과 두려움, 최종 결과를 종합적으로 분석합니다.
+                  </p>
+                  <span className="text-purple-400 text-xs font-medium">난이도: 중-상급</span>
+                </div>
+              </div>
+
+              <h2 className="text-3xl font-bold text-white mt-12 mb-4">타로 리딩 시 주의사항</h2>
+              <div className="bg-white/5 p-6 rounded-2xl border border-white/10 mb-8">
+                <ul className="space-y-3 text-gray-300 text-sm leading-relaxed">
+                  <li className="flex gap-2">
+                    <span className="text-purple-400 font-bold flex-shrink-0">1.</span>
+                    <span>타로는 절대적인 예언이 아닌, 현재 에너지의 흐름을 읽는 도구입니다. 미래는 언제든 변할 수 있습니다.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-purple-400 font-bold flex-shrink-0">2.</span>
+                    <span>같은 질문을 반복해서 물어보지 마세요. 첫 번째 리딩을 신뢰하고 그 메시지를 깊이 생각해보세요.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-purple-400 font-bold flex-shrink-0">3.</span>
+                    <span>&quot;죽음&quot; 카드나 &quot;탑&quot; 카드 같은 카드가 나와도 두려워하지 마세요. 이들은 변화와 전환을 의미하며, 부정적인 의미만을 가지지 않습니다.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-purple-400 font-bold flex-shrink-0">4.</span>
+                    <span>리딩 전 마음을 가라앉히고 집중하세요. 명확한 의도를 가지고 질문을 떠올리면 더 정확한 리딩이 가능합니다.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-purple-400 font-bold flex-shrink-0">5.</span>
+                    <span>타로 카드 해석에 정답은 없습니다. 직관을 믿고 카드가 당신에게 전하는 개인적인 메시지에 귀 기울여보세요.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <h2 className="text-3xl font-bold text-white mt-12 mb-4">디지털 타로의 시대</h2>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                현대에는 물리적인 카드 없이도 디지털 타로를 통해 손쉽게 리딩을 경험할 수 있습니다. 디지털 타로는 전통적인 타로의 상징성을 유지하면서도 접근성을 크게 높였습니다. 아름다운 카드 아트와 직관적인 인터페이스를 통해 누구나 타로의 세계에 입문할 수 있습니다.
+              </p>
+
+              <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 p-6 rounded-2xl border border-purple-500/20 mt-8">
+                <h3 className="text-xl font-bold text-white mt-0 mb-3">지금 바로 타로 리딩 체험하기</h3>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  신비한 타로에서 아름다운 카드 아트와 함께 무료 타로 리딩을 체험해보세요. 원 카드 리딩부터 쓰리 카드 리딩까지, 직관적인 인터페이스로 쉽게 시작할 수 있습니다.
+                </p>
+                <a
+                  href="https://tarot.lymin80.shop"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-purple-500/20 text-purple-300 px-5 py-2.5 rounded-xl font-bold text-sm hover:bg-purple-500/30 transition-colors"
+                >
+                  신비한 타로 방문하기 →
+                </a>
+              </div>
+            </div>
+          </article>
+        </FadeIn>
+
+        {/* Back to Blog */}
+        <FadeInView className="mt-16">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors font-bold"
+          >
+            <ArrowLeft size={18} />
+            블로그로 돌아가기
+          </Link>
+        </FadeInView>
+      </div>
+    </section>
+  );
+}

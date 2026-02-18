@@ -6,7 +6,7 @@
   <!-- 메인 포털 페이지 -->
   <url>
     <loc>https://www.lymin80.shop/</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.lymin80.shop/" />
@@ -15,6 +15,94 @@
       <image:title>Lymin80 Shop - 무료 웹 게임 &amp; 운세 포털</image:title>
       <image:caption>무료 웹 게임, 타로 운세, 미니게임을 한곳에서 즐기세요</image:caption>
     </image:image>
+  </url>
+
+  <!-- 게임 목록 페이지 -->
+  <url>
+    <loc>https://www.lymin80.shop/games</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 블로그 메인 -->
+  <url>
+    <loc>https://www.lymin80.shop/blog</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 블로그 글: 웹 게임 가이드 -->
+  <url>
+    <loc>https://www.lymin80.shop/blog/web-game-guide</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 블로그 글: 타로 가이드 -->
+  <url>
+    <loc>https://www.lymin80.shop/blog/tarot-guide</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 블로그 글: 캐주얼 게임 스트레스 해소 -->
+  <url>
+    <loc>https://www.lymin80.shop/blog/casual-games-stress-relief</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 블로그 글: 브라우저 게임의 역사 -->
+  <url>
+    <loc>https://www.lymin80.shop/blog/browser-game-history</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 블로그 글: 스네이크 게임 전략 -->
+  <url>
+    <loc>https://www.lymin80.shop/blog/snake-game-strategy</loc>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 소개 페이지 -->
+  <url>
+    <loc>https://www.lymin80.shop/about</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 문의 페이지 -->
+  <url>
+    <loc>https://www.lymin80.shop/contact</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 개인정보처리방침 -->
+  <url>
+    <loc>https://www.lymin80.shop/privacy</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- 이용약관 -->
+  <url>
+    <loc>https://www.lymin80.shop/terms</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 
   <!-- 지그재그 스네이크 게임 -->
@@ -27,10 +115,6 @@
       <image:loc>https://www.lymin80.shop/zigzag.png</image:loc>
       <image:title>지그재그 - 온라인 스네이크 게임</image:title>
       <image:caption>네온 빛 세상에서 펼쳐지는 초고속 스네이크 게임</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.lymin80.shop/zigzag_banner.png</image:loc>
-      <image:title>지그재그 게임 배너</image:title>
     </image:image>
   </url>
 
@@ -45,10 +129,6 @@
       <image:title>신비한 타로 - 무료 타로 운세</image:title>
       <image:caption>고대 아르카나로 당신의 운명을 확인하세요</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://www.lymin80.shop/tarot_banner.png</image:loc>
-      <image:title>신비한 타로 배너</image:title>
-    </image:image>
   </url>
 
   <!-- 박테리아 워 전략 게임 -->
@@ -61,10 +141,6 @@
       <image:loc>https://www.lymin80.shop/bacteria.png</image:loc>
       <image:title>박테리아 워 - 전략 생존 게임</image:title>
       <image:caption>현미경 속 거대한 전쟁! 바이러스 군단을 지휘하세요</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.lymin80.shop/bacteria_banner.png</image:loc>
-      <image:title>박테리아 워 배너</image:title>
     </image:image>
   </url>
 

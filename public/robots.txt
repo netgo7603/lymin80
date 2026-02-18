@@ -4,19 +4,11 @@
 # 모든 검색엔진 허용
 User-agent: *
 Allow: /
-Disallow: /assets/
 Disallow: /portal/
-Disallow: /*.js$
-Disallow: /*.css$
 
 # Google 검색봇
 User-agent: Googlebot
 Allow: /
-Allow: /og_image.png
-Allow: /zigzag.png
-Allow: /tarot.png
-Allow: /bacteria.png
-Allow: /resetflow.png
 
 # Google 이미지봇
 User-agent: Googlebot-Image
