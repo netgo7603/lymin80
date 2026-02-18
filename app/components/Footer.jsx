@@ -1,7 +1,12 @@
+'use client';
+
 import Link from 'next/link';
 import { Github, Twitter } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Footer() {
+  const { dict } = useLanguage();
+
   return (
     <footer className="bg-black py-16 border-t border-white/10 relative overflow-hidden">
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-neon-purple/10 to-transparent pointer-events-none" />
@@ -13,36 +18,36 @@ export default function Footer() {
               LYMIN80<span className="text-neon-green">.</span>SHOP
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
-              설치 없이 브라우저에서 바로 즐기는 무료 웹 게임 포털. 매일 새로운 즐거움을 발견하세요.
+              {dict.footer.slogan}
             </p>
           </div>
 
           <div>
-            <h4 className="text-white font-bold uppercase tracking-wider mb-4 text-sm">Games</h4>
+            <h4 className="text-white font-bold uppercase tracking-wider mb-4 text-sm">{dict.footer.sections.games}</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
-              <li><a href="https://zigzag.lymin80.shop/" target="_blank" rel="noopener noreferrer" className="hover:text-neon-green transition-colors">지그재그</a></li>
-              <li><a href="https://tarot.lymin80.shop/" target="_blank" rel="noopener noreferrer" className="hover:text-neon-purple transition-colors">신비한 타로</a></li>
-              <li><a href="https://bacteria.lymin80.shop/" target="_blank" rel="noopener noreferrer" className="hover:text-neon-gold transition-colors">박테리아 워</a></li>
-              <li><a href="https://resetflow.lymin80.shop/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">리셋 플로우</a></li>
+              <li><a href="https://zigzag.lymin80.shop/" target="_blank" rel="noopener noreferrer" className="hover:text-neon-green transition-colors">{dict.games.items.zigzag.name}</a></li>
+              <li><a href="https://tarot.lymin80.shop/" target="_blank" rel="noopener noreferrer" className="hover:text-neon-purple transition-colors">{dict.games.items.tarot.name}</a></li>
+              <li><a href="https://bacteria.lymin80.shop/" target="_blank" rel="noopener noreferrer" className="hover:text-neon-gold transition-colors">{dict.games.items.bacteria.name}</a></li>
+              <li><a href="https://resetflow.lymin80.shop/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">{dict.games.items.resetflow.name}</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-bold uppercase tracking-wider mb-4 text-sm">Resources</h4>
+            <h4 className="text-white font-bold uppercase tracking-wider mb-4 text-sm">{dict.footer.sections.resources}</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
-              <li><Link href="/blog" className="hover:text-white transition-colors">블로그</Link></li>
-              <li><Link href="/blog/web-game-guide" className="hover:text-white transition-colors">웹 게임 가이드</Link></li>
-              <li><Link href="/blog/tarot-guide" className="hover:text-white transition-colors">타로 입문 가이드</Link></li>
-              <li><Link href="/about" className="hover:text-white transition-colors">사이트 소개</Link></li>
+              <li><Link href="/blog" className="hover:text-white transition-colors">{dict.footer.links.blog}</Link></li>
+              <li><Link href="/blog/web-game-guide" className="hover:text-white transition-colors">{dict.footer.links.webGameGuide}</Link></li>
+              <li><Link href="/blog/tarot-guide" className="hover:text-white transition-colors">{dict.footer.links.tarotGuide}</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">{dict.footer.links.about}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-bold uppercase tracking-wider mb-4 text-sm">Legal</h4>
+            <h4 className="text-white font-bold uppercase tracking-wider mb-4 text-sm">{dict.footer.sections.legal}</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
-              <li><Link href="/privacy" className="hover:text-white transition-colors">개인정보처리방침</Link></li>
-              <li><Link href="/terms" className="hover:text-white transition-colors">이용약관</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">문의하기</Link></li>
+              <li><Link href="/privacy" className="hover:text-white transition-colors">{dict.footer.links.privacy}</Link></li>
+              <li><Link href="/terms" className="hover:text-white transition-colors">{dict.footer.links.terms}</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">{dict.footer.links.contact}</Link></li>
             </ul>
           </div>
         </div>
@@ -50,7 +55,7 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-600 text-sm">
-              &copy; 2026 Lymin80 Shop. All rights reserved.
+              {dict.footer.copyright}
             </p>
             <div className="flex gap-4">
               <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-white/10 hover:text-neon-purple transition-all duration-300 border border-white/5 text-gray-400">

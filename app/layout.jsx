@@ -66,6 +66,8 @@ export const metadata = {
   },
 };
 
+import { LanguageProvider } from './context/LanguageContext';
+
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
@@ -214,13 +216,15 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <div className="min-h-screen bg-dark-bg text-white font-sans selection:bg-neon-green selection:text-black">
-          <Header />
-          <main className="pt-20">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <LanguageProvider>
+          <div className="min-h-screen bg-dark-bg text-white font-sans selection:bg-neon-green selection:text-black">
+            <Header />
+            <main className="pt-20">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   );

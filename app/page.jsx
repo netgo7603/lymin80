@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { ArrowRight, Cpu, Zap, Globe, Heart } from 'lucide-react';
 import HeroSection from './components/HeroSection';
@@ -5,9 +7,25 @@ import GameCard from './components/GameCard';
 import { FadeInView } from './components/AnimatedSection';
 import { games } from './data/games';
 import AdUnit from './components/AdUnit';
+import { useLanguage } from './context/LanguageContext';
 
 
 export default function HomePage() {
+  const { dict, language } = useLanguage();
+
+  // 게임 데이터에 다국어 설명 적용
+  const translatedGames = games.map(game => {
+    // game.id와 일치하는 키를 dict.games.items에서 찾음
+    // 예: game.id가 'zigzag'이면 dict.games.items.zigzag 참조
+    // 일치하는 키가 없으면 원래 데이터 사용
+    const trans = dict.games.items[game.id] || {};
+    return {
+      ...game,
+      title: trans.name || game.title,
+      description: trans.desc || game.description
+    };
+  });
+
   return (
     <>
       <HeroSection />
@@ -19,20 +37,20 @@ export default function HomePage() {
 
         <div className="container mx-auto px-6 relative z-10 max-w-7xl">
           <FadeInView className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-black mb-6 font-display">추천 <span className="text-neon-purple">게임</span></h2>
+            <h2 className="text-5xl md:text-6xl font-black mb-6 font-display">{dict.games.title} <span className="text-neon-purple">{dict.games.subtitle}</span></h2>
             <div className="w-24 h-1 bg-neon-purple mx-auto rounded-full mb-6" />
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">엄선된 최고의 웹 게임들을 만나보세요.</p>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">{dict.games.desc}</p>
           </FadeInView>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {games.map((game) => (
+            {translatedGames.map((game) => (
               <GameCard key={game.id} {...game} />
             ))}
           </div>
 
           <div className="text-center mt-12">
             <Link href="/games" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors font-bold uppercase tracking-wider">
-              모든 게임 보기 <ArrowRight size={18} />
+              {dict.games.viewAll} <ArrowRight size={18} />
             </Link>
           </div>
         </div>
@@ -55,19 +73,19 @@ export default function HomePage() {
 
         <div className="container mx-auto px-6 relative z-10 max-w-7xl">
           <FadeInView className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-4 font-display">사이트 <span className="text-neon-gold">소개</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black mb-4 font-display">{dict.about.title} <span className="text-neon-gold">{dict.about.subtitle}</span></h2>
             <div className="w-24 h-1 bg-neon-gold mx-auto rounded-full mb-8" />
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              웹 게임의 미래를 만들어갑니다. 빠르고, 몰입감 넘치며, 브라우저에서 바로 즐길 수 있습니다.
+              {dict.about.desc}
             </p>
           </FadeInView>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Zap, title: '즉시 실행', desc: '다운로드나 설치가 필요 없습니다. 최적화된 웹 엔진으로 바로 액션에 뛰어드세요.' },
-              { icon: Cpu, title: '최첨단 기술', desc: 'React, WebGL, 최신 CSS 등 최신 웹 기술로 구동되는 부드러운 성능.' },
-              { icon: Globe, title: '어디서나 접속', desc: '모든 기기에서 끊김 없이 플레이하세요. 데스크탑부터 모바일까지.' },
-              { icon: Heart, title: '열정 중심', desc: '게이머가 게이머를 위해 만든 경험. 수익화보다 재미에 집중합니다.' },
+              { icon: Zap, title: dict.about.features.instant.title, desc: dict.about.features.instant.desc },
+              { icon: Cpu, title: dict.about.features.tech.title, desc: dict.about.features.tech.desc },
+              { icon: Globe, title: dict.about.features.access.title, desc: dict.about.features.access.desc },
+              { icon: Heart, title: dict.about.features.passion.title, desc: dict.about.features.passion.desc },
             ].map(({ icon: Icon, title, desc }, i) => (
               <FadeInView key={i} delay={i * 0.1} className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
                 <div className="mb-4 inline-block p-3 rounded-xl bg-gradient-to-br from-neon-purple/20 to-blue-500/20">
@@ -96,24 +114,28 @@ export default function HomePage() {
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50" />
         <div className="container mx-auto px-6 relative z-10 max-w-7xl">
           <FadeInView className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-4 font-display">게임 <span className="text-blue-400">가이드</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black mb-4 font-display">{dict.blog.title} <span className="text-blue-400">{dict.blog.subtitle}</span></h2>
             <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-6" />
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">웹 게임과 타로에 대한 유용한 가이드와 팁을 확인하세요.</p>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">{dict.blog.desc}</p>
           </FadeInView>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: '웹 게임의 모든 것: 초보자를 위한 완벽 가이드', desc: '웹 게임이란 무엇인지, 어떻게 시작하는지 알아봅니다.', slug: 'web-game-guide' },
-              { title: '타로 카드 입문: 아르카나의 세계로', desc: '타로 카드의 역사부터 각 카드의 의미, 리딩 방법까지.', slug: 'tarot-guide' },
-              { title: '스트레스 해소를 위한 캐주얼 게임 활용법', desc: '짧은 시간에 즐기기 좋은 캐주얼 웹 게임을 추천합니다.', slug: 'casual-games-stress-relief' },
+              { title: '웹 게임의 모든 것: 초보자를 위한 완벽 가이드', titleEn: 'Web Games 101: A Complete Guide for Beginners', desc: '웹 게임이란 무엇인지, 어떻게 시작하는지 알아봅니다.', descEn: 'Learn what web games are and how to get started.', slug: 'web-game-guide' },
+              { title: '타로 카드 입문: 아르카나의 세계로', titleEn: 'Intro to Tarot: Into the World of Arcana', desc: '타로 카드의 역사부터 각 카드의 의미, 리딩 방법까지.', descEn: 'From the history of tarot to the meaning of each card and how to read them.', slug: 'tarot-guide' },
+              { title: '스트레스 해소를 위한 캐주얼 게임 활용법', titleEn: 'How to Use Casual Games for Stress Relief', desc: '짧은 시간에 즐기기 좋은 캐주얼 웹 게임을 추천합니다.', descEn: 'We recommend casual web games that are great for short breaks.', slug: 'casual-games-stress-relief' },
             ].map((post, i) => (
               <FadeInView key={i} delay={i * 0.1}>
                 <Link href={`/blog/${post.slug}`} className="block bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 h-full">
                   <span className="text-blue-400 text-xs font-bold uppercase tracking-wider">Guide</span>
-                  <h3 className="text-lg font-bold mt-2 mb-3 text-white font-display">{post.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{post.desc}</p>
+                  <h3 className="text-lg font-bold mt-2 mb-3 text-white font-display">
+                    {language === 'ko' ? post.title : post.titleEn}
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {language === 'ko' ? post.desc : post.descEn}
+                  </p>
                   <span className="inline-flex items-center gap-1 mt-4 text-sm text-gray-500 hover:text-white transition-colors">
-                    자세히 보기 <ArrowRight size={14} />
+                    {dict.blog.readMore} <ArrowRight size={14} />
                   </span>
                 </Link>
               </FadeInView>
@@ -122,7 +144,7 @@ export default function HomePage() {
 
           <div className="text-center mt-12">
             <Link href="/blog" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors font-bold uppercase tracking-wider">
-              모든 글 보기 <ArrowRight size={18} />
+              {dict.blog.viewAll} <ArrowRight size={18} />
             </Link>
           </div>
         </div>
