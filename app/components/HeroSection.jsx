@@ -3,10 +3,12 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Gamepad2, Share2 } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import ShareModal from './ShareModal';
 
 export default function HeroSection() {
   const [isShareOpen, setIsShareOpen] = useState(false);
+  const { dict } = useLanguage();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden -mt-20">
@@ -49,8 +51,8 @@ export default function HeroSection() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="text-xl md:text-3xl text-gray-300 max-w-4xl mx-auto font-light mb-12 px-4 leading-relaxed"
         >
-          <span className="md:block">매일매일 새로운 즐거움이 가득한 곳.</span>
-          <span className="md:block mt-2">신비로운 타로 운세부터 네온 빛 가득한 아케이드 게임까지.</span>
+          <span className="md:block">{dict.hero.subtitle}</span>
+          <span className="md:block mt-2">{dict.hero.desc}</span>
         </motion.p>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
@@ -61,7 +63,7 @@ export default function HeroSection() {
             transition={{ delay: 0.8 }}
             className="group relative inline-flex items-center justify-center py-5 px-12 rounded-full bg-white text-dark-bg font-bold text-xl uppercase tracking-widest overflow-hidden transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_rgba(57,255,20,0.6)]"
           >
-            <span className="relative z-10 group-hover:text-black transition-colors">지금 시작하기</span>
+            <span className="relative z-10 group-hover:text-black transition-colors">{dict.hero.start}</span>
             <div className="absolute inset-0 bg-neon-green opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </motion.a>
 

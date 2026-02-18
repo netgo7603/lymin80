@@ -15,7 +15,7 @@ export const dictionaries = {
         hero: {
             title: "LYMIN80",
             shop: "SHOP",
-            subtitle: "매일 새로운 즐거움을 발견하세요.",
+            subtitle: "매일매일 새로운 즐거움이 가득한 곳.",
             desc: "신비로운 타로 운세부터 네온 빛 가득한 아케이드 게임까지.",
             start: "지금 시작하기",
         },
