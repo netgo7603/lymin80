@@ -135,7 +135,7 @@ const PrivacyPage = () => {
                 </p>
                 <div className="bg-white/5 p-6 rounded-xl border border-white/10">
                   <p><strong className="text-white">운영자:</strong> Lymin80 Shop</p>
-                  <p><strong className="text-white">이메일:</strong> contact@lymin80.shop</p>
+                  <p><strong className="text-white">이메일:</strong> lymin80@gmail.com</p>
                   <p><strong className="text-white">웹사이트:</strong> https://www.lymin80.shop</p>
                 </div>
               </div>

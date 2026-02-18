@@ -191,7 +191,7 @@ export default function PrivacyPage() {
               </p>
               <ul className="list-disc list-inside text-gray-300 leading-relaxed space-y-2">
                 <li><strong className="text-white">소속:</strong> Lymin80 Shop</li>
-                <li><strong className="text-white">이메일:</strong> contact@lymin80.shop</li>
+                <li><strong className="text-white">이메일:</strong> lymin80@gmail.com</li>
               </ul>
             </section>
           </FadeIn>

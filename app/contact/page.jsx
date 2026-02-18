@@ -44,8 +44,8 @@ export default function ContactPage() {
                             </div>
                             <h3 className="text-xl font-bold text-white mb-2">이메일 문의</h3>
                             <p className="text-gray-400 mb-4">일반적인 문의, 제안, 협업 요청</p>
-                            <a href="mailto:contact@lymin80.shop" className="text-blue-400 hover:underline font-bold">
-                                contact@lymin80.shop
+                            <a href="mailto:lymin80@gmail.com" className="text-blue-400 hover:underline font-bold">
+                                lymin80@gmail.com
                             </a>
                         </div>
 
@@ -55,8 +55,8 @@ export default function ContactPage() {
                             </div>
                             <h3 className="text-xl font-bold text-white mb-2">버그 신고</h3>
                             <p className="text-gray-400 mb-4">게임 오류, 사이트 문제 등 기술적 이슈</p>
-                            <a href="mailto:contact@lymin80.shop" className="text-neon-purple hover:underline font-bold">
-                                contact@lymin80.shop
+                            <a href="mailto:lymin80@gmail.com" className="text-neon-purple hover:underline font-bold">
+                                lymin80@gmail.com
                             </a>
                         </div>
                     </div>
