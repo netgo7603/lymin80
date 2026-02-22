@@ -67,7 +67,7 @@ export default function GamesPage() {
         {/* AdSense Unit */}
         <div className="mb-12">
           <AdUnit
-            slotId="REPLACE_WITH_SLOT_ID_3"
+            slotId="5712499147"
             className="w-full text-center"
             style={{ minHeight: '100px' }}
           />
@@ -84,7 +84,7 @@ export default function GamesPage() {
         {/* AdSense Unit */}
         <div className="mb-20">
           <AdUnit
-            slotId="REPLACE_WITH_SLOT_ID_4"
+            slotId="5712499147"
             className="w-full text-center"
             style={{ minHeight: '100px' }}
           />

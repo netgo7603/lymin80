@@ -154,7 +154,7 @@ export default function AboutPage() {
         {/* AdSense Unit */}
         <div className="mt-24">
           <AdUnit
-            slotId="REPLACE_WITH_SLOT_ID_5"
+            slotId="5712499147"
             className="w-full text-center"
             style={{ minHeight: '100px' }}
           />
